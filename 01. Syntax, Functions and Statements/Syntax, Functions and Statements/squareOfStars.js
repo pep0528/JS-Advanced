@@ -1,13 +1,15 @@
 function squareOfStars (input) {
     let n = Number(input);
 
-    for (let row = 0; row < n; row++) {
-        if (row === 0 || row === n - 1) {
-            console.log('* '.repeat(n));
-            continue;
+    if (n === null || n === "" || n === 0) {
+        for (let i = 0; i < 5; i++) {
+            console.log('* '.repeat(5).trim());
         }
-        console.log(`*${' '.repeat(n - 2)}*`);
+    } else {
+        for (let i = 0; i < n; i++) {
+            console.log('* '.repeat(n).trim());
+        }
     }
 }
 
-squareOfStars(1)
+squareOfStars(5)
